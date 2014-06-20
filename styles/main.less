@@ -1,0 +1,87 @@
+//////////////////////////////
+///////// Less mixin /////////
+//////////////////////////////
+
+// Replacement for base colors
+@navy: #001F3F;
+@blue: #0074D9;
+@aqua: #7FDBFF;
+@teal: #39CCCC;
+@olive: #3D9970;
+@green: #2ECC40;
+@lime: #01FF70;
+@yellow: #FFDC00;
+@orange: #FF851B;
+@red: #FF4136;
+@maroon: #85144B;
+@fuchsia: #F012BE;
+@purple: #B10DC9;
+@silver: #DDDDDD;
+@grey: #AAAAAA;
+@black: #111111;
+
+// Custom functions
+
+
+//////////////////////////////
+//////// Custom reset ////////
+//////////////////////////////
+
+html, button, input, select, textarea { color: #222; }
+html { font-size: 1em; line-height: 1.4; }
+
+// Remove bottom gap
+audio, canvas, img, video { vertical-align: middle; }
+
+// Allow only vertical resizing of textareas.
+textarea { resize: vertical; }
+
+// /!\/!\/!\/!\/!\ CHANGE BOX MODEL /!\/!\/!\/!\/!\
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+// Message < IE8
+.browsehappy {
+    margin: 0;
+    background: lighten(@yellow, 20%);
+    color: @black;
+    padding: 1em;
+    a{
+    	color: @red;
+    	font-weight: bold;
+    }
+}
+
+// Selection style
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+::selection { background: #b3d4fc; text-shadow: none; }
+
+//////////////////////////////
+/////////// General //////////
+//////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////
+/////////// Helper ///////////
+//////////////////////////////
+
+// Bg image texte replacement
+.ir { background-color: transparent; border: 0; overflow: hidden; /* IE 6/7 fallback */ *text-indent: -9999px; }
+.ir:before { content: ""; display: block; width: 0; height: 150%; }
+
+// Clearfix 
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.lt-ie9 .clearfix { zoom: 1; }

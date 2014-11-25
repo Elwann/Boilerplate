@@ -10,6 +10,8 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
 	<script src="scripts/libs/modernizr-2.6.2.min.js"></script>
@@ -25,6 +27,7 @@
                 <ul>
                     <li><a href="#boutons">Boutons</a></li>
                     <li><a href="#grid-system">Grid System</a></li>
+                    <li><a href="#form">Form</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,8 +35,14 @@
         <div class="col-9 col-sm-12">
             <div class="clearfix">
                 <h1 id="boutons">Boutons</h1>
-
+                
+                <h4>Animated</h4>
                 <button class="btn">Bouton</button>
+                <button class="btn-inset">Button</button>
+                <button class="btn-inline">Button</button>
+                <button class="btn-inline-inset">Button</button>
+                
+                <h4>Types</h4>
                 <button class="btn btn-warning">Warning</button>
             </div>
 
@@ -61,6 +70,55 @@
                 <div class="col-6 col-sm-6 col-xs-12 demo-box-grid">.col-6</div>
             </div>
 
+            <div class="clearfix">
+                <h1 id="form">Form</h1>
+
+                <label>Login</label>
+                <div class="form-login"><input type="text" placeholder="User ou adresse courriel"></div>
+                <label>Password</label>
+                <div class="form-password"><input type="password"></div>
+                <div class="row">
+                  <div class="col-6">
+                    <input type="search">
+                  </div>
+                  <div class="col-6">
+                    <input type="email">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <input type="url">
+                  </div>
+                  <div class="col-6">
+                    <input type="tel">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <input type="number">
+                  </div>
+                  <div class="col-6">
+                    <input type="date">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <input type="month">
+                  </div>
+                  <div class="col-6">
+                    <input type="week">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <input type="time">
+                  </div>
+                  <div class="col-6">
+                    <input type="datetime">
+                  </div>
+                </div>
+                <input type="datetime-local">
+            </div>
         </div>
     </div>
 

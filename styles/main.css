@@ -47,11 +47,40 @@ textarea {
   text-shadow: none;
 }
 body {
-  color: #111111;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444;
+  background: #f5f5f5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
 }
 h1 {
+  display: inline-block;
+  margin-right: auto;
+  font-size: 52px;
+  line-height: 44px;
+  /*margin: 0; padding: 0;*/
+  font-weight: normal;
+  border-bottom: 2px solid #444;
+  text-shadow: 2px 2px 0 #f5f5f5, -2px -2px 0 #f5f5f5, -2px 2px 0 #f5f5f5, 2px -2px 0 #f5f5f5;
+}
+h2 {
+  font-size: 40px;
+  /*margin: 0; padding: 0;*/
+  font-weight: normal;
+}
+h3 {
+  font-size: 28px;
+  /*margin: 0; padding: 0;*/
+  font-weight: normal;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+h4 {
+  font-size: 22px;
+  /*margin: 0; padding: 0;*/
+  font-weight: normal;
+  text-transform: uppercase;
 }
 .wrapper-center {
   position: relative;
@@ -59,32 +88,209 @@ h1 {
   width: 100%;
   max-width: 1200px;
 }
-.btn {
-  float: left;
-  padding: 10px 25px;
-  margin-bottom: 5px;
+.btn,
+.btn-inset,
+.btn-inline,
+.btn-inline-inset {
+  position: relative;
+  padding: 10px 30px;
   border: none;
   outline: none;
-  color: #777777;
-  background: #dddddd;
-  text-shadow: 0 -1px 0 #111111, 0 1px 0 #ffffff;
-  box-shadow: 0 5px 0 #aaaaaa;
+  color: #fff;
+  background: #39cccc;
+  font-size: 13px;
+  line-height: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  text-transform: uppercase;
+  z-index: 1;
 }
-.btn:hover,
-.btn:focus {
-  margin-top: 3px;
-  margin-bottom: 2px;
-  box-shadow: 0 2px 0 #aaaaaa;
+.btn:before,
+.btn-inset:before,
+.btn-inline:before,
+.btn-inline-inset:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  background: #33bbbe;
+  opacity: 0;
+  border-radius: 100px;
+  transition: all ease 0.2s;
+  z-index: -1;
 }
-.btn-warning {
-  color: #cf0b00;
+.btn:hover:before,
+.btn-inset:hover:before,
+.btn-inline:hover:before,
+.btn-inline-inset:hover:before {
+  top: -50%;
+  left: 15%;
+  width: 70%;
+  height: 200%;
+  opacity: 1;
+}
+.btn:active:before,
+.btn-inset:active:before,
+.btn-inline:active:before,
+.btn-inline-inset:active:before,
+.btn:focus:before,
+.btn-inset:focus:before,
+.btn-inline:focus:before,
+.btn-inline-inset:focus:before {
+  transition: all ease-in 0.1s;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  background: #2ea9b0;
+}
+.btn-inset:before {
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+}
+.btn-inset:hover:before {
+  left: 15%;
+  width: 70%;
+  border-radius: 1000px;
+}
+.btn-inset:active:before,
+.btn-inset:focus:before {
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+}
+.btn-inline {
+  color: #666;
+  background: transparent;
+}
+.btn-inline:before {
+  top: 0;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  background: #eee;
+  border-radius: 100px;
+}
+.btn-inline:hover:before {
+  top: -50%;
+  left: 15%;
+  width: 70%;
+  height: 200%;
+}
+.btn-inline:active:before,
+.btn-inline:focus:before {
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  background: #ddd;
+}
+.btn-inline-inset {
+  color: #666;
+  background: transparent;
+}
+.btn-inline-inset:before {
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: #eee;
+  border-radius: 0;
+}
+.btn-inline-inset:hover:before {
+  left: 15%;
+  width: 70%;
+  border-radius: 1000px;
+}
+.btn-inline-inset:active:before,
+.btn-inline-inset:focus:before {
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  background: #ddd;
+}
+.btn.btn-warning {
   background: #ff4136;
-  text-shadow: 0 -1px 0 #9c0900, 0 1px 0 #ff5950;
-  box-shadow: 0 5px 0 #cf0b00;
 }
-.btn-warning:hover,
-.btn-warning:focus {
-  box-shadow: 0 2px 0 #cf0b00;
+.btn.btn-warning:before {
+  background: #e7383a;
+}
+.btn.btn-warning:active:before,
+.btn.btn-warning:focus:before {
+  background: #ce2f3e;
+}
+label {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 10px;
+}
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"] {
+  padding: 9px 11px;
+  border: 1px solid #bbb;
+  outline: none;
+  color: #777;
+  background: #fff;
+  font-size: 13px;
+  line-height: 15px;
+  width: 100%;
+  margin-bottom: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus {
+  border: 1px solid #999;
+  color: #444;
+}
+.form-login,
+.form-password {
+  position: relative;
+}
+.form-login input,
+.form-password input {
+  padding-left: 30px;
+}
+.form-login:before,
+.form-password:before {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  color: #777;
+  content: "\f023";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.form-login:before {
+  content: "\f007";
 }
 .box-content {
   padding: 20px;
